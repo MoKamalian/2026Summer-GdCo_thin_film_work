@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "moke_processor",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "moke_processor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-moke_processor-Debug-92afaee041619a8cd63f.json",
+					"name" : "moke_processor",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mokamalian/Documents/DALHOUSIE/2026 SUMMER/Ted_lab-internship/data_analysis/moke_processor/out/build/Clang 10.0.0 x86_64-pc-linux-gnu",
+		"source" : "/home/mokamalian/Documents/DALHOUSIE/2026 SUMMER/Ted_lab-internship/data_analysis/moke_processor"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

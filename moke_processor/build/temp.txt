@@ -1,0 +1,69 @@
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+
+int main() {
+    // Input and output files
+    std::ifstream inputFile("11-MAY-2026-MOKE_calibration_test_Si_2026test.txt");
+    std::ofstream outputFile("moke_data.csv");
+
+    if (!inputFile.is_open()) {
+        std::cerr << "Could not open input file.\n";
+        return 1;
+    }
+
+    if (!outputFile.is_open()) {
+        std::cerr << "Could not create output CSV file.\n";
+        return 1;
+    }
+
+    std::string line;
+    bool dataStarted = false;
+
+    // Write CSV header
+    outputFile << "Time_ms,Field_Oe,Signal_V,Extra,Step\n";
+
+    while (std::getline(inputFile, line)) {
+
+        // Detect where the numerical data begins
+        if (!dataStarted) {
+            if (line.find("Time (ms)") != std::string::npos) {
+                dataStarted = true;
+
+                // Skip the next line because it is the calibration path
+                std::getline(inputFile, line);
+
+                continue;
+            }
+        }
+        else {
+            // Skip empty lines
+            if (line.empty())
+                continue;
+
+            std::stringstream ss(line);
+
+            double time, field, signal, extra, step;
+
+            // Read tab/space separated values
+            if (ss >> time >> field >> signal >> extra >> step) {
+
+                // Write as CSV
+                outputFile
+                    << time << ","
+                    << field << ","
+                    << signal << ","
+                    << extra << ","
+                    << step << "\n";
+            }
+        }
+    }
+
+    inputFile.close();
+    outputFile.close();
+
+    std::cout << "CSV file created successfully.\n";
+
+    return 0;
+}

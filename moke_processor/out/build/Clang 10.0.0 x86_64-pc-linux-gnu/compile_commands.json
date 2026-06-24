@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/mokamalian/Documents/DALHOUSIE/2026 SUMMER/Ted_lab-internship/data_analysis/moke_processor/out/build/Clang 10.0.0 x86_64-pc-linux-gnu",
+  "command": "/usr/bin/clang++    -g   -o CMakeFiles/moke_processor.dir/main.cpp.o -c \"/home/mokamalian/Documents/DALHOUSIE/2026 SUMMER/Ted_lab-internship/data_analysis/moke_processor/main.cpp\"",
+  "file": "/home/mokamalian/Documents/DALHOUSIE/2026 SUMMER/Ted_lab-internship/data_analysis/moke_processor/main.cpp"
+}
+]
